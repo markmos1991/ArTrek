@@ -1,5 +1,4 @@
 
-
 const APIKey =  "tatityas";
 
 // search term variable that needs to come from searhc bar
@@ -17,6 +16,9 @@ $.ajax({
   }).then(function(response) {
     console.log(response.items);
   });
+
+
+
 
 
 
