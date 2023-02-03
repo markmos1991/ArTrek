@@ -1,8 +1,10 @@
+var searchFormEl = $('#search-form');
 // store API Keys as variables
   // EU Key
 var EUAPIKey =  "tatityas";
   // GG Key
 var GGAPIKey = "AIzaSyADX0Zd0LOToDJv9h85TLZXc8GUliRPzTU";
+
 
 // create a function to search EU API when keyword is entered into search bar
   // select specific data from the 12 returned objects
@@ -22,10 +24,12 @@ var GGAPIKey = "AIzaSyADX0Zd0LOToDJv9h85TLZXc8GUliRPzTU";
     //Display a map with marker in this modal
       // use the objects lat and long data as input for the Maps API to display Marker
   
-function searchEuropeana() {
+function searchEuropeana(event) {
+  event.preventDefault();
+
   var EUQuery = document.getElementById("userInput").value;
   console.log(EUQuery);
-  var queryURL = "https://api.europeana.eu/record/v2/search.json?wskey=" + APIKey + "&query=" + EUQuery;
+  var queryURL = "https://api.europeana.eu/record/v2/search.json?wskey=" + EUAPIKey + "&query=" + EUQuery;
   // log the data available on input of a city name
   $.ajax({
       url: queryURL,
@@ -34,3 +38,5 @@ function searchEuropeana() {
       console.log(response);
     });
 }
+
+searchFormEl.on('submit', searchEuropeana);
