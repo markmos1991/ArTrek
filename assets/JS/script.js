@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+
+const APIKey =  "tatityas";
+
+// search term variable that needs to come from searhc bar
+var searchTerm = "impressionism";
+
+
+var queryURL = "https://api.europeana.eu/record/v2/search.json?wskey=" + APIKey + "&query=" + searchTerm;
+
+
+
+// return data from the search term
+$.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response.items);
+  });
+
+
+
+
+
+
+=======
 var searchFormEl = $('#search-form');
 // store API Keys as variables
   // EU Key
@@ -39,3 +65,4 @@ searchFormEl.on('submit', searchEuropeana);
   // on clicking on card, display a modal which shows the more detailed info of the whole object
     //Display a map with marker in this modal
       // use the objects lat and long data as input for the Maps API to display Marker
+>>>>>>> e7f074d10955712e722cd95126a4f782f12d80b6
