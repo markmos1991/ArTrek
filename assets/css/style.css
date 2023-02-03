@@ -1,17 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap');
-
 * {
-    font-family: "Poppins", sans-serif;
-}
+    box-sizing: border-box;
+    background-color: black;
+  }
+  .navbar-brand{
+    color:rgb(161, 241, 241);
+  }
 body {
-    background-image: url("../images/background.png");
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+    margin-top: 20px;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(161, 241, 241);
+    line-height: 1.5;
+    background-color: black;
 }
+.resultsColumn{
+    display: flex;
+    width:100%;
+    height: 100%;
+    justify-items: center;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+
 
 h1, h2 {
     font-weight: bold;
+    text-align: center;
+    font-size: 1.4em;
 }
 
 h2 {
@@ -21,18 +37,54 @@ h2 {
 nav {
     font-weight: bold;
     font-size: 1.4em;
-    margin: 1rem;
+    margin: 40px;
+}
+
+.jumbotron { 
+    padding-bottom: 300px;
+
+}
+.jumbotron .input-group{
+    padding: 60px;
+    background-color: rgba(174, 123, 222, 0.683);
+}
+#search-addon{
+    background-color:rgba(187, 163, 210, 0.683); ;
+}
+.fas{
+    background-color:rgba(187, 163, 210, 0.683); ;
+}
+.jumbotron p{
+    text-align: center;
 }
 
 .card {
-    margin: 0 auto; 
-    float: none; 
-    margin-bottom: 10px;
-    width: 18rem;
+    margin-bottom: 600px; 
+    margin-left: 40px;
+
 }
 
-button:hover {
+.lowContainer {
+    margin-bottom: 600px;
+    padding:60px;
+    width:100%;
+}
+.lowContainer .trekContinues{
+    padding:20px;
+}
+.trekContinues p{
+    text-align: center;
+}
+.beyond{
+    text-align: center;
+}
+    /* float: none; 
+    margin-bottom: 10px;
+    width: 18rem;
+} */
+
+/* button:hover {
     transition: 0.4s ease-in-out;
     box-shadow: 0 0 20px rgb(16, 64, 116);
     cursor: pointer; 
-}
+} */
