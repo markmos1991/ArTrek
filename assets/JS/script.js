@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-
-const APIKey =  "tatityas";
-
-// search term variable that needs to come from searhc bar
-var searchTerm = "impressionism";
-
-
-var queryURL = "https://api.europeana.eu/record/v2/search.json?wskey=" + APIKey + "&query=" + searchTerm;
-
-
-
-// return data from the search term
-$.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
-    console.log(response.items);
-  });
-
-
-
-
-
-
-=======
 var searchFormEl = $('#search-form');
 // store API Keys as variables
   // EU Key
@@ -39,13 +13,35 @@ function searchEuropeana(event) {
   var EUQuery = $("#userInput").val(); 
   console.log(EUQuery);
   var queryURL = "https://api.europeana.eu/record/v2/search.json?wskey=" + EUAPIKey + "&query=" + EUQuery;
-  // log the data available on input of a keyword
+  
+  // initialise item data object to store response data 
+  var itemData = {};
   $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function(response) {
       // select specific data from the 12 returned objects
+      // var responseData = response.data;
+      // responseData.forEach(function(artefactData) {
+      //   console.log(artefactData);
+      // })
+      // Extract the item data from the API response
+      var items = response.items;
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        // Store the specific aspect of the item data in the object
+        itemData[i] = {
+          title: Array.isArray(item.title) ? item.title[0] : item.title,
+          description: Array.isArray(item.description) ? item.description[0] : item.description,
+          image: Array.isArray(item.edmPreview) ? item.edmPreview[0] : item.edmPreview,
+          latitude: Array.isArray(item.edmPlaceLatitude) ? item.edmPlaceLatitude[0] : item.edmPlaceLatitude,
+          longitude: Array.isArray(item.edmPlaceLongitude) ? item.edmPlaceLongitude[0] : item.edmPlaceLongitude
+        };
+      }
+      // console.log(response)
+      console.log(itemData[0]);
   // store results for each item together in a new object for each item
+  
     // Select Title *
     // Select thumbnail image *
     // Select description *
@@ -65,4 +61,3 @@ searchFormEl.on('submit', searchEuropeana);
   // on clicking on card, display a modal which shows the more detailed info of the whole object
     //Display a map with marker in this modal
       // use the objects lat and long data as input for the Maps API to display Marker
->>>>>>> e7f074d10955712e722cd95126a4f782f12d80b6
