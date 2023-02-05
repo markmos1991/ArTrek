@@ -50,7 +50,7 @@
     <p>search by artist, artwork or style</p>
     <p class="lead">
         <form class="input-group rounded mx-auto" style="width: 500px;" id="search-form"> <!--mxa-auto and style+ width, centers search abr and keeps it at a constrained width-->
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <input id="userInput" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
             <span class="input-group-text border-0" id="search-addon">
                 <button type="submit" class="btn fas fa-search"></button>
             </span>
@@ -65,151 +65,12 @@
 <!----------------------------------- SEARCH RESULTS---------------------------------->
 <!-------------------------------------card 1 starts----------------------->
    
-<!--  
+
 <div class="container-fluid" id="searchResults">
-        <div class="resultsColumn">
-            <h2 class="display-3"> the journey begins</h2>
-            <div class="cardContainer card w-100 mt-2 col-sm-12 col-md-6 col-lg-3"> <!-- mw-100 mt-2 makes containers fill 100% of screen-->
-            <!--  <div class="card flex-row flex-wrap"> makes card container display image on left, need to get text to fill remainder of container-->
-                <img src="./assets/images/03.png" class="resultImages" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-            </div> 
-                <div class="card-body">
-                    <h5 class="card-title">one</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare arcu dui vivamus arcu felis. Velit scelerisque in dictum non consectetur a erat. Et malesuada fames ac turpis.</p>
-                    <!-- button to trigger modal-->
-                    <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">More Information</a>
-                </div>
-        </div>
-    </div>
-<!--------------------------------card 1 end ------------------------------------>
+</div>
 
-    <!--card 2 start -->
-    <div class="container-fluid" id="searchResults">
-        <div class="resultsColumn">
-            <div class="cardContainer card w-100 mt-2 col-sm-12 col-md-6 col-lg-3"> <!-- mw-100 mt-2 makes containers fill 100% of screen-->
-            <!--  <div class="card flex-row flex-wrap"> makes card container display image on left, need to get text to fill remainder of container-->
-                <img src="./assets/images/25.png" class="resultImages" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-            </div> 
-                <div class="card-body">
-                    <h5 class="card-title">two</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare arcu dui vivamus arcu felis. Velit scelerisque in dictum non consectetur a erat. Et malesuada fames ac turpis.</p>
-                    <!-- button to trigger modal-->
-                    <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">More Information</a>
-                </div>
-        </div>
-    </div>
-    <!--card 2 end -->
 
-    <!--card 3 start -->
-    <div class="container-fluid" id="searchResults">
-        <div class="resultsColumn">
-            <div class="cardContainer card w-100 mt-2 col-sm-12 col-md-6 col-lg-3"> <!-- mw-100 mt-2 makes containers fill 100% of screen-->
-                <!--  <div class="card flex-row flex-wrap"> makes card container display image on left, need to get text to fill remainder of container-->
-                <img src="./assets/images/27.png" class="resultImages" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                    </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-            </div> 
-                <div class="card-body">
-                    <h5 class="card-title">three</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare arcu dui vivamus arcu felis. Velit scelerisque in dictum non consectetur a erat. Et malesuada fames ac turpis.</p>
-                            <!-- button to trigger modal-->
-                    <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">More Information</a>
-                </div>
-        </div>
-    </div>
-    <!--card 3 end -->
-
-    <!--card 4 start -->
-    <div class="container-fluid" id="searchResults">
-        <div class="resultsColumn">
-            <div class="cardContainer card w-100 mt-2 col-sm-12 col-md-6 col-lg-3"> <!-- mw-100 mt-2 makes containers fill 100% of screen-->
-                <!--  <div class="card flex-row flex-wrap"> makes card container display image on left, need to get text to fill remainder of container-->
-                <img src="./assets/images/38.png" class="resultImages" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="" class="d-block w-100" alt="">
-                        </div>
-                        </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-            </div> 
-                <div class="card-body">
-                    <h5 class="card-title">four</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare arcu dui vivamus arcu felis. Velit scelerisque in dictum non consectetur a erat. Et malesuada fames ac turpis.</p>
-                            <!-- button to trigger modal-->
-                    <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">More Information</a>
-                </div>
-        </div>
-    </div>
-    <!--card 4 end-->
-    */
+    
 
 <!-- lower third of page -->
 <div class="lowContainer" id="missionOfTrek">
@@ -234,7 +95,12 @@
 </div>
 
     <!-- modal content -->
-    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+
+    <div id="modalBox">
+    </div>
+
+    <!-- modal content -->
+    <!-- <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -251,14 +117,14 @@
                         <h3>see the details</h3>
                         <p class="col-sm-2 col-md-2 col-lg-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum recusandae veniam quod! Est velit voluptates consectetur ullam accusamus sit nostrum cumque, provident amet. Qui aperiam libero recusandae dolores incidunt iste. Odio deserunt, tempore obcaecati consequatur placeat et nulla est nobis ad. Sed illum, veritatis eaque voluptatibus laudantium eligendi fuga dolorum sunt voluptatem perferendis error facere omnis hic. Minima, quo sequi.</p>
                     </div>
-                    <!-- templates for inserting images -->
-                    <div class="col-sm-6 col-md-6 col-lg-6">
+                     templates for inserting images -->
+                    <!-- <div class="col-sm-6 col-md-6 col-lg-6">
                         <img src="./assets/images/background.png" class="img-fluid" alt="...">
                         <img src="./assets/images/03.png" class="img-fluid" alt="...">
                     </div>
-                    <!-- templates to insert map -->
-                        <h3>Map</h3>
-                    <iframe width="450" height="250" frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/MAP_MODE?key=AIzaSyADX0Zd0LOToDJv9h85TLZXc8GUliRPzTU&PARAMETERS" allowfullscreen></iframe>
+                    templates to insert map -->
+                        <!-- <h3>Map</h3>
+                    <iframe width="450" height="250" frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/MAP_MODE?key=YOUR_API_KEY&PARAMETERS" allowfullscreen></iframe>
                 </div>
                 <div class="modal-footer bg-dark">
                     <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
@@ -266,7 +132,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
