@@ -31,25 +31,22 @@ function searchEuropeana(event) {
         var item = items[i];
         // Store the specific aspect of the item data in the object
         itemData[i] = {
+          // Select Title *
           title: Array.isArray(item.title) ? item.title[0] : item.title,
+          // Select description *
           description: Array.isArray(item.description) ? item.description[0] : item.description,
+          // Select thumbnail image *
           image: Array.isArray(item.edmPreview) ? item.edmPreview[0] : item.edmPreview,
+          // select location
+          // Latitude
           latitude: Array.isArray(item.edmPlaceLatitude) ? item.edmPlaceLatitude[0] : item.edmPlaceLatitude,
+          // Longitude
           longitude: Array.isArray(item.edmPlaceLongitude) ? item.edmPlaceLongitude[0] : item.edmPlaceLongitude
         };
       }
       // console.log(response)
-      console.log(itemData[0]);
-  // store results for each item together in a new object for each item
-  
-    // Select Title *
-    // Select thumbnail image *
-    // Select description *
-    // Select large image
-    // Select any associated audio clips
-    // select location
-      // Latitude
-      // Longitude
+      console.log(itemData[0])
+   
       console.log(response);
     });
 }
