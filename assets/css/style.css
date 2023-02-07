@@ -17,6 +17,9 @@ body {
 .container-fluid{
     width:80%;
 }
+.jumbotron img{
+    justify-content: center;
+}
 
 /* searchResults is the id containing all the bootstrap cards- all the content that will return from the api search */
 #searchResults{ 
