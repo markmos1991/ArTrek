@@ -56,29 +56,17 @@ function displayCards(itemData) {
     
     // Create the card HTML
     var cardHTML = `
-      <div class="resultsColumn">
-        <div class="cardContainer card w-100 mt-2 col-sm-12 col-md-6 col-lg-3">
-          <img src="${item.image}" class="resultImages" id="carouselExampleControls${i}" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="${item.image}" class="d-block w-100" alt="${item.title}">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls${i}" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls${i}" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+    <div class="container-fluid">
+        <div class="card">
+          <img src="${item.image}" class="card-image-top" alt="">
           <div class="card-body">
             <h5 class="card-title">${item.title}</h5>
             <p class="card-text">${item.description}</p>
             <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#itemModal${i}">More Information</a>
           </div>
         </div>
-      </div>
+
+    </div>
     `
     
     // Append the card HTML to the card container
