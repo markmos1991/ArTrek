@@ -2,10 +2,10 @@
 * {
     box-sizing: border-box;
     background-color: black;
-  }
-  .navbar-brand{
+}
+.navbar-brand{
     color:rgb(161, 241, 241);
-  }
+}
 body {
     margin-top: 20px;
     padding: 0;
@@ -14,25 +14,52 @@ body {
     line-height: 1.5;
     background-color: black;
 }
-.container-fluid{
+/* .container-fluid{
     width:80%;
-}
-/* searchResults is the id containing all the bootstrap cards- all the content that will return from the api search */
-#searchResults{ 
-    padding:60px;
-}
-/* resultsColumn was the row that i turned into a column*/
-.resultsColumn{
-    flex-direction: column;
-    width:100%;
-    height: 100%;
-    justify-items: center;
-    margin: top 60px;
-    margin-bottom: 60px;
+
 }
 
+} */
+
+/* searchResults is the id containing all the bootstrap cards- all the content that will return from the api search */
+/* #searchResults{ 
+    padding:10px;
+} */
+/* resultsColumn was the row that i turned into a column*/
+/* .resultsColumn {
+    display: flex;
+    flex-direction: row;
+    margin: top 60px;
+    margin-bottom: 60px;
+} */
+
 .card img{
-    max-height: 500px;
+    inline-size: 100%;
+    border-radius: 2px;
+}
+
+.card {
+    border: #000;
+    width: 18rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    grid-auto-columns: 36%;
+    padding: 0.5rem;
+    overflow-x: scroll;
+}
+
+/* custom scroll bar */
+
+#searchResults::-webkit-scrollbar {
+	height: 8px;
+	background-color: rgb(161, 241, 241);
+}
+
+#searchResults::-webkit-scrollbar-thumb {
+	background-color: #444;
 }
 
 h1, h2 {
@@ -55,13 +82,17 @@ nav {
 } */
 
 /* jumbotron elements */
-.jumbotron { 
+/* .jumbotron { 
     padding-bottom: 300px;
+
     justify-content:center;
 }
 .jumbotron .img{
     width: 100%;
 }
+
+
+} */
 
 .jumbotron p{
     text-align: center;
@@ -74,9 +105,15 @@ nav {
 #search-addon{
     background-color:transparent;
 }
+
 .fas{
     background-color:transparent;
 }
+
+/* .fas{
+    background-color:rgba(187, 163, 210, 0.683); ;
+} */
+
 
 .lowContainer {
     margin-bottom: 600px;
@@ -103,3 +140,7 @@ nav {
     box-shadow: 0 0 20px rgb(16, 64, 116);
     cursor: pointer; 
 } */
+
+#search-form {
+    width: 60%;
+}
