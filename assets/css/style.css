@@ -9,13 +9,16 @@
 body {
     margin-top: 20px;
     padding: 0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color:rgb(161, 241, 241);
+    font-family:'Courier New', Courier, monospace;
+    color:#ff3c00;
     line-height: 1.5;
     background-color: black;
 }
 /* .container-fluid{
     width:80%;
+
+}
+
 } */
 
 /* searchResults is the id containing all the bootstrap cards- all the content that will return from the api search */
@@ -81,21 +84,36 @@ nav {
 /* jumbotron elements */
 /* .jumbotron { 
     padding-bottom: 300px;
+
+    justify-content:center;
+}
+.jumbotron .img{
+    width: 100%;
+}
+
+
 } */
+
 .jumbotron p{
     text-align: center;
 }
 
 /*contains search bar elements */
 .jumbotron .input-group{
-    background-color:black;
+    background-color:#ff3c00;
 }
 #search-addon{
-    background-color:rgba(187, 163, 210, 0.683); ;
+    background-color:transparent;
 }
+
+.fas{
+    background-color:transparent;
+}
+
 /* .fas{
     background-color:rgba(187, 163, 210, 0.683); ;
 } */
+
 
 .lowContainer {
     margin-bottom: 600px;
