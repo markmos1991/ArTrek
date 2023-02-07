@@ -50,12 +50,12 @@ body {
 
 /* custom scroll bar */
 
-.container::-webkit-scrollbar {
+#searchResults::-webkit-scrollbar {
 	height: 8px;
 	background-color: rgb(161, 241, 241);
 }
 
-.container::-webkit-scrollbar-thumb {
+#searchResults::-webkit-scrollbar-thumb {
 	background-color: #444;
 }
 
@@ -122,3 +122,7 @@ nav {
     box-shadow: 0 0 20px rgb(16, 64, 116);
     cursor: pointer; 
 } */
+
+#search-form {
+    width: 60%;
+}
