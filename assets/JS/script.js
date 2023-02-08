@@ -62,10 +62,13 @@ function displayCards(itemData) {
           <div class="card-body">
             <h5 class="card-title">${item.title}</h5>
             <p class="card-text">${item.description}</p>
-            <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">More Information</a>
-          </div>
+            <h3>Map</h3>
+            <iframe frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/MAP_MODE?key=YOUR_API_KEY&PARAMETERS" allowfullscreen></iframe>
         </div>
-
+        <div class="modal-footer bg-dark">
+        </div>
+        </div>
+        </div>
     </div>
     `
     
