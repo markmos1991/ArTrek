@@ -20,9 +20,12 @@ function searchEuropeana(event) {
       url: queryURL,
       method: "GET"
     }).then(function(response) {
-      // select specific data from the 12 returned objects
       // Extract the item data from the API response
+      // variable of results to be filtered
+      console.log(response);
       var items = response.items;
+    
+      // select specific data from the returned objects
       for (var i = 0; i < items.length; i++) {
         var item = items[i];
         // Store the specific aspect of the item data in the object
@@ -37,7 +40,9 @@ function searchEuropeana(event) {
           // Latitude
           latitude: Array.isArray(item.edmPlaceLatitude) ? item.edmPlaceLatitude[0] : item.edmPlaceLatitude,
           // Longitude
-          longitude: Array.isArray(item.edmPlaceLongitude) ? item.edmPlaceLongitude[0] : item.edmPlaceLongitude
+          longitude: Array.isArray(item.edmPlaceLongitude) ? item.edmPlaceLongitude[0] : item.edmPlaceLongitude,
+          // select provider
+          provider: Array.isArray(item.dataProvider)? item.dataProvider[0] : item.dataProvider,
         };
       }
       console.log(itemData);
@@ -61,16 +66,17 @@ function displayCards(itemData) {
           <img src="${item.image}" class="card-image-top" alt="">
           <div class="card-body">
             <h5 class="card-title">${item.title}</h5>
-            <p class="card-text">${item.description}</p>
+            <p class="card-text">${item.dcDescription}</p>
             <h3>Map</h3>
             <iframe frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/MAP_MODE?key=YOUR_API_KEY&PARAMETERS" allowfullscreen></iframe>
         </div>
         <div class="modal-footer bg-dark">
         </div>
         </div>
-        </div>
+        </div>gitgit gi
     </div>
     `
+    
     
     // Append the card HTML to the card container
     $("#searchResults").append(cardHTML);
@@ -78,3 +84,6 @@ function displayCards(itemData) {
 }
 
 searchFormEl.on('submit', searchEuropeana);
+
+
+
