@@ -45,6 +45,7 @@ function searchEuropeana(event) {
           provider: Array.isArray(item.dataProvider)? item.dataProvider[0] : item.dataProvider,
         };
       }
+      console.log(response)
       console.log(itemData);
       displayCards(itemData);
       
@@ -68,7 +69,7 @@ function displayCards(itemData) {
             <h5 class="card-title">${item.title}</h5>
             <p class="card-text">${item.dcDescription}</p>
             <h3>Map</h3>
-            <iframe frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/MAP_MODE?key=YOUR_API_KEY&PARAMETERS" allowfullscreen></iframe>
+            <iframe frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/MAP_MODE?key=" + GGAPIKey + "&PARAMETERS" allowfullscreen></iframe>
         </div>
         <div class="modal-footer bg-dark">
         </div>
