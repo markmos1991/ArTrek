@@ -33,7 +33,7 @@ function searchEuropeana(event) {
           // Select Title *
           title: Array.isArray(item.title) ? item.title[0] : item.title,
           // Select description *
-          description: Array.isArray(item.description) ? item.description[0] : item.description,
+          description: Array.isArray(item.dcDescription) ? item.dcDescription[0] : item.dcDescription,
           // Select thumbnail image *
           image: Array.isArray(item.edmPreview) ? item.edmPreview[0] : item.edmPreview,
           // select location
@@ -45,6 +45,7 @@ function searchEuropeana(event) {
           provider: Array.isArray(item.dataProvider)? item.dataProvider[0] : item.dataProvider,
         };
       }
+      console.log(response)
       console.log(itemData);
       displayCards(itemData);
       
@@ -66,14 +67,14 @@ function displayCards(itemData) {
           <img src="${item.image}" class="card-image-top" alt="">
           <div class="card-body">
             <h5 class="card-title">${item.title}</h5>
-            <p class="card-text">${item.dcDescription}</p>
+            <p class="card-text">${item.description}</p>
             <h3>Map</h3>
-            <iframe frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/MAP_MODE?key=YOUR_API_KEY&PARAMETERS" allowfullscreen></iframe>
+            <iframe frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyADX0Zd0LOToDJv9h85TLZXc8GUliRPzTU&q=${item.provider}"></iframe>
         </div>
         <div class="modal-footer bg-dark">
         </div>
         </div>
-        </div>gitgit gi
+        </div>
     </div>
     `
     
