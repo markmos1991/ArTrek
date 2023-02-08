@@ -29,11 +29,16 @@ function searchEuropeana(event) {
       for (var i = 0; i < items.length; i++) {
         var item = items[i];
         // Store the specific aspect of the item data in the object
+        // if response is an array, only return the first item from the array
         itemData[i] = {
           // Select Title *
           title: Array.isArray(item.title) ? item.title[0] : item.title,
           // Select description *
           description: Array.isArray(item.dcDescription) ? item.dcDescription[0] : item.dcDescription,
+          // select Year
+          year: Array.isArray(item.year) ? item.year[0] : item.year,
+          // select country
+          country: Array.isArray(item.country) ? item.country[0] : item.country,
           // Select thumbnail image *
           image: Array.isArray(item.edmPreview) ? item.edmPreview[0] : item.edmPreview,
           // select location
@@ -67,6 +72,8 @@ function displayCards(itemData) {
           <img src="${item.image}" class="card-image-top" alt="">
           <div class="card-body">
             <h5 class="card-title">${item.title}</h5>
+            <p class="card-text">Year: ${item.year}</p>
+            <p class="card-text">Country of Origin: ${item.country}</p>
             <p class="card-text">${item.description}</p>
             <h3>Map</h3>
             <iframe frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyADX0Zd0LOToDJv9h85TLZXc8GUliRPzTU&q=${item.provider}"></iframe>
