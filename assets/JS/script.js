@@ -33,6 +33,8 @@ function searchEuropeana(event) {
         itemData[i] = {
           // Select Title *
           title: Array.isArray(item.title) ? item.title[0] : item.title,
+          // Select link for provider *
+          link: Array.isArray(item.edmIsShownAt) ? item.edmIsShownAt[0] : item.edmIsShownAt,
           // Select description *
           description: Array.isArray(item.dcDescription) ? item.dcDescription[0] : item.dcDescription,
           // select Year
@@ -69,7 +71,7 @@ function displayCards(itemData) {
     var cardHTML = `
     <div class="container-fluid">
         <div class="card">
-          <img src="${item.image}" class="card-image-top" alt="">
+        <a href="${item.link}" target="_blank"><img src="${item.image}" class="card-image-top" alt=""></a>
           <div class="card-body">
             <h5 class="card-title">${item.title}</h5>
             <p class="card-text">Year: ${item.year}</p>
