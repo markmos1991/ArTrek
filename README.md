@@ -18,7 +18,7 @@ A database of art history - used to provide search results upon user request.
 Used to display the location of an individual artefact.
 
 ## Screenshot
-
+![screenshot](/assets/images/Screenshot.png)
 
 
 ## Link
