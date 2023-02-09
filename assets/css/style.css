@@ -41,11 +41,10 @@ body {
 }
 
 .card {
-    border: #ff3c00;
+    border-color: rgb(161, 241, 241);
     width: 25rem;
-    padding: 5px;
-    margin: 5px;
-    border-width: 1px;
+    margin: 5rem;
+    border-width: 0.1rem;
 }
 .card p{
     font-family: 'Monaco', Monospace;
@@ -63,7 +62,7 @@ body {
 .card iframe{
     inline-size: 100%;
     border-color:#ff3c00;
-    border-width: 3px;
+    border-width: 1rem;
 }
 
 .container {
@@ -120,6 +119,7 @@ nav {
 .jumbotron p{
     text-align: center;
     font-family: 'Monaco', Monospace;
+    color:rgb(161, 241, 241);
 }
 
 /*contains search bar elements */
