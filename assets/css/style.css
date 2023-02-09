@@ -32,21 +32,44 @@ body {
     margin: top 60px;
     margin-bottom: 60px;
 } */
-
+.container-fluid{
+    margin-top: 20px;
+}
 .card img{
     inline-size: 100%;
     border-radius: 2px;
 }
 
 .card {
-    border: #000;
-    width: 18rem;
+    border: #ff3c00;
+    width: 25rem;
+    padding: 5px;
+    margin: 5px;
+    border-width: 1px;
+}
+.card p{
+    font-family: 'Monaco', Monospace;
+}
+.card h3{
+    font-family: 'Monaco', Monospace;
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+}
+.card h5 {
+    font-weight:bold;
+}
+
+.card iframe{
+    inline-size: 100%;
+    border-color:#ff3c00;
+    border-width: 3px;
 }
 
 .container {
     display: flex;
     flex-direction: row;
-    grid-auto-columns: 36%;
+    grid-auto-columns:36%;
     padding: 0.5rem;
     overflow-x: scroll;
 }
@@ -54,12 +77,12 @@ body {
 /* custom scroll bar */
 
 #searchResults::-webkit-scrollbar {
-	height: 8px;
-	background-color: rgb(161, 241, 241);
+	height: 4px;
+	background-color: #ff3c00;
 }
 
 #searchResults::-webkit-scrollbar-thumb {
-	background-color: #444;
+	background-color: rgb(161, 241, 241);
 }
 
 h1, h2 {
@@ -96,6 +119,7 @@ nav {
 
 .jumbotron p{
     text-align: center;
+    font-family: 'Monaco', Monospace;
 }
 
 /*contains search bar elements */
@@ -122,6 +146,9 @@ nav {
 }
 .lowContainer .trekContinues{
     padding:20px;
+}
+.lead{
+    font-family: 'Monaco', Monospace;
 }
 .trekContinues p{
     text-align: center;
