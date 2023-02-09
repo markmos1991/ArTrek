@@ -6,6 +6,10 @@
 .navbar-brand{
     color:rgb(161, 241, 241);
 }
+.navbar-brand:hover{
+    color:#ff3c00;
+    text-shadow: 5px 5px 5px whitesmoke;
+}
 body {
     margin-top: 20px;
     padding: 0;
@@ -125,6 +129,9 @@ nav {
 /*contains search bar elements */
 .jumbotron .input-group{
     background-color:#ff3c00;
+}
+.input-group:hover{
+    text-shadow: 5px 5px 5px whitesmoke;
 }
 #search-addon{
     background-color:transparent;
